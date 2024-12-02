@@ -1,4 +1,5 @@
 import random # рандом
+import turtle
 
 # Начало игры
 print("Добро пожаловать в игру 'Виселица'!")
