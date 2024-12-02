@@ -17,3 +17,12 @@ while hp >= 0 and len(bukv) >= 0:
   print("У вас осталось", hp, "жизней")
   print("Неугаданные буквы:", ' '.join(ne_ugad))
   guess = input("Введите букву: ").lower()
+  if guess in alf - ne_ugad - ugadani:
+    ugadani.add(guess)
+    if guess in bukv:
+      bukv.remove(guess)
+      print(" ")
+    else:
+      ne_ugad.add(guess)
+      hp -= 1
+      print(" ")
