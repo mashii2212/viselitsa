@@ -1,5 +1,5 @@
 import random # рандом
-
+import turtle
 # Начало игры
 print("Добро пожаловать в игру 'Виселица'!")
 with open("слова.txt", "r", encoding="utf-8") as f:
