@@ -1,6 +1,100 @@
 import random # рандом
 import turtle
 
+def smail(hp):
+    screen = turtle.Screen()
+    screen.bgcolor("white")
+    smiley = turtle.Turtle()
+    smiley.speed(25) # скорость
+    smiley.pensize(20) # толщина черепахи
+
+    if hp == 5: # лицо
+      smiley.penup()
+      smiley.goto(0, -100)
+      smiley.pendown()
+      smiley.color("yellow")
+      smiley.begin_fill()
+      smiley.circle(100)  # Радиус круга
+      smiley.end_fill()
+
+    if hp == 4: # правый глаз
+     for x in [-35]:
+        smiley.penup()
+        smiley.goto(x, 20)
+        smiley.pendown()
+        smiley.color("black")
+        smiley.begin_fill()
+        smiley.circle(5)  # Радиус глаз
+        smiley.end_fill()
+
+    if hp == 3:
+       for x in [35]:
+        smiley.penup()
+        smiley.goto(x, 20)
+        smiley.pendown()
+        smiley.color("black")
+        smiley.begin_fill()
+        smiley.circle(5)  # Радиус глаз
+        smiley.end_fill()
+    if hp == 2:
+      smiley.penup()
+      smiley.goto(-40, -20)
+      smiley.setheading(-60)  # Угол наклона
+      smiley.pendown()
+      smiley.circle(50, 120)  # Радиус и угол дуги
+
+    if hp == 1:
+      for x in [-35]:
+        smiley.penup()
+        smiley.goto(x, 20)
+        smiley.pendown()
+        smiley.color("black")
+        smiley.begin_fill()
+
+        smiley.setheading(225)  # Устанавливаем угол 225 градусов
+        smiley.forward(23)  # Двигаемся на 100 единиц
+
+        # Двигаемся по диагонали вправо и вверх
+        smiley.setheading(45)  # Устанавливаем угол 45 градусов
+        smiley.forward(46)  # Двигаемся на 100 единиц
+
+        # Двигаемся по диагонали влево и вниз
+        smiley.setheading(225)  # Устанавливаем угол 225 градусов
+        smiley.forward(23)  # Двигаемся на 100 единиц
+
+        smiley.setheading(135)  # Устанавливаем угол 225 градусов
+        smiley.forward(23)  # Двигаемся на 100 единиц
+
+        smiley.setheading(315)  # Устанавливаем угол 225 градусов
+        smiley.forward(46)  # Двигаемся на 100 единиц
+
+    if hp == 0:
+      for x in [35]:
+        smiley.penup()
+        smiley.goto(x, 20)
+        smiley.pendown()
+        smiley.color("black")
+        smiley.begin_fill()
+
+        smiley.setheading(225)  # Устанавливаем угол 225 градусов
+        smiley.forward(23)  # Двигаемся на 100 единиц
+
+        # Двигаемся по диагонали вправо и вверх
+        smiley.setheading(45)  # Устанавливаем угол 45 градусов
+        smiley.forward(46)  # Двигаемся на 100 единиц
+
+        # Двигаемся по диагонали влево и вниз
+        smiley.setheading(225)  # Устанавливаем угол 225 градусов
+        smiley.forward(23)  # Двигаемся на 100 единиц
+
+        smiley.setheading(135)  # Устанавливаем угол 225 градусов
+        smiley.forward(23)  # Двигаемся на 100 единиц
+
+        smiley.setheading(315)  # Устанавливаем угол 225 градусов
+        smiley.forward(46)  # Двигаемся на 100 единиц
+        smiley.hideturtle()
+        turtle.done()
+
 # Начало игры
 print("Добро пожаловать в игру 'Виселица'!")
 with open("слова.txt", "r", encoding="utf-8") as f:
