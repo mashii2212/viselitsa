@@ -133,3 +133,10 @@ if hp == 0:
       if len(bukv) == 0:
           print("Поздравляю! Вы угадали слово:", word)
           break
+elif guess in ugadani:
+    print("Вы уже угадали эту букву. Попробуйте другую.")
+  else:
+    print("Неверный ввод. Введите букву.")
+
+  word_list = [letter if letter in ugadani else '_' for letter in word]
+  print(" ".join(word_list))
