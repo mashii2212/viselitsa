@@ -121,3 +121,15 @@ while hp >= 0 and len(bukv) >= 0:
       ne_ugad.add(guess)
       hp -= 1
       print(" ")
+if hp == 0:
+      print("У вас закончились жизни. Слово было:", word)
+      ris = smail(hp)
+      break
+    if len(bukv) == 0:
+        print("Поздравляю! Вы угадали слово:", word)
+        break
+    if len(bukv) != 0 and hp > 0:
+      ris =smail(hp)
+      if len(bukv) == 0:
+          print("Поздравляю! Вы угадали слово:", word)
+          break
