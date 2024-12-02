@@ -115,7 +115,7 @@ while hp >= 0 and len(bukva) >= 0:
   if guess in alf - ne_ugad - ugadani:
     ugadani.add(guess)
     if guess in bukva:
-      bukv.remove(guess)
+      bukva.remove(guess)
       print(" ")
     else:
       ne_ugad.add(guess)
